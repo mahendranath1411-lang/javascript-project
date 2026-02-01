@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Laptop Image Animation</title>
+
+<style>
+body {
+  margin: 0;
+  background: orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Center container */
+.scene {
+  position: relative;
+  width: 800px;
+  height: 300px;
+}
+
+/* Table */
+.table {
+  width: 800px;
+  height: 25px;
+  background: #7b4a12;
+  position: absolute;
+  bottom: 0;
+}
+
+/* Laptop container */
+.laptop {
+  position: absolute;
+  bottom: 25px; /* sits on table */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Laptop base image */
+.base {
+  width: 600px;
+  transform-origin: bottom center;
+  transform: rotateX(90deg);
+  transition: transform 5s linear; 
+   /* rotate 30 degrees */
+}
+
+/* Open state */
+.base.open {
+  transform: rotateX(0deg);
+}
+.title {
+  position: absolute;
+  bottom: -55px;
+  width: 100%;
+  text-align: center;
+  color: blue;
+  font-family: Arial, sans-serif;
+}
+</style>
+</head>
+
+<body>
+   
+
+<div class="scene">
+    
+  <div class="table"></div>
+
+  <div class="laptop">
+    <img src="Laptop.jpg" class="base" id="base">
+  </div>
+   <!-- H1 BELOW TABLE -->
+  <h1 class="title"> Laptop Animation</h1>
+</div>
+</div>
+
+<script src="scripts/scripts.js"></script>
+</body>
+</html>
